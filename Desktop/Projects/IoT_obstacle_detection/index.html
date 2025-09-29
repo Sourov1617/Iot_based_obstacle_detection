@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Obstacle Detection System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <h2 class="header">🚂 IoT-Enabled Real-Time Obstacle Detection,and Automated Train Stopping System</h2>
+            <p class="description">
+                A computer vision and IoT-based solution for railway safety through obstacle detection, environmental monitoring, and automated stopping.
+            </p>
+
+            <div class="data-section">
+                <h3 class="section-title">Live Measurement Data</h3>
+                <ul class="data-grid">
+                    <li class="data-item">
+                        <span class="data-icon">⏰</span>
+                        <span class="data-label">Time:</span>
+                        <span class="data-value" id="time-value">14:32:15 IST</span>
+                        <span class="status-indicator status-online"></span>
+                    </li>
+                    <!-- <li class="data-item">
+                        <span class="data-icon">📅</span>
+                        <span class="data-label">Date:</span>
+                        <span class="data-value" id="date-value">Sep 16, 2024</span>
+                    </li> -->
+                    <li class="data-item">
+                        <span class="data-icon">📍</span>
+                        <span class="data-label">Location:</span>
+                        <div class="location-item">
+                            <img src="location.jpg" alt="Location" class="location-img">
+                            <span class="data-value">Bhubaneswar, Odisha</span>
+                        </div>
+                    </li>
+                    <li class="data-item">
+                        <span class="data-icon">🚄</span>
+                        <span class="data-label">Train Speed:</span>
+                        <span class="data-value" id="speed-value">6.2 km/h</span>
+                        <span class="status-indicator status-online"></span>
+                    </li>
+                    <li class="data-item">
+                        <span class="data-icon">🌡️</span>
+                        <span class="data-label">Temperature:</span>
+                        <span class="data-value" id="temp-value">34°C</span>
+                    </li>
+                    <li class="data-item">
+                        <span class="data-icon">💧</span>
+                        <span class="data-label">Humidity:</span>
+                        <span class="data-value" id="humidity-value">65%</span>
+                    </li>
+                    <li class="data-item">
+                        <span class="data-icon">📏</span>
+                        <span class="data-label">Obstacle Distance:</span>
+                        <span class="data-value" id="distance-value"></span>
+                        <span class="status-indicator status-online"></span>
+                    </li>
+                    <!-- <li class="data-item">
+                        <span class="data-icon">🔊</span>
+                        <span class="data-label">Sound Level:</span>
+                        <span class="data-value" id="sound-value">72 dB</span>
+                    </li> -->
+
+                    <li class="data-item">
+                        <span class="data-icon">🌤️</span>
+                        <span class="data-label">Weather:</span>
+                        <span class="data-value" id="weather-value">Partly Cloudy</span>
+                    </li>
+                    <li class="data-item">
+                        <span class="data-icon">⚠️</span>
+                        <span class="data-label">Obstacle Status:</span>
+                        <div class="detection-buttons">
+                            <button class="btn btn-detected" id="detected">❌ Detected</button>
+                            <button class="btn btn-not-detected" id="not-detected">✅ <p>Clear</p></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Side Panel for Object Detection -->
+        <div class="object-detection-panel">
+            <h3 class="panel-title">Object Detection View</h3>
+            <div class="object-image-container">
+                <img src="moving.jpg" alt="Detected Object" class="object-img">
+            </div>
+
+            <div class="detection-stats">
+                <!-- <div class="stat-item">
+                    <span class="stat-label">Confidence Level:</span>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 85%"></div>
+                    </div>
+                    <span class="stat-value">85%</span>
+                </div> -->
+                <div class="stat-item">
+                    <span class="stat-label">Processing Time:</span>
+                    <span class="stat-value">--</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Objects Detected: </span>
+                    <span class="stat-value">--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+
+</body>
+
+</html>
